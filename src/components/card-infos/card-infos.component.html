@@ -1,0 +1,36 @@
+<div class=" pt-10 ">
+    <div
+      class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 p-2"
+    >
+      <div class="flex items-center gap-3 pb-4">
+        <svg xmlns="http://www.w3.org/2000/svg" class="fill-white w-10" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512l388.6 0c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304l-91.4 0z"/></svg>      
+    <h2 class="text-white">Informações do Usuário</h2>
+    </div>
+      <div class="bg-white p-4 rounded shadow-lg flex flex-col gap-2">
+        <div class="bg-white p-4 rounded shadow-lg flex flex-col gap-2">
+  
+            <!-- Nome -->
+            <div class="flex justify-between text-zinc-800 border-b-gray-950 border-b-2 pb-2">
+              <p>Nome</p>
+              <p class="font-bold">{{ usuario.nome }}</p>
+            </div>
+          
+            <!-- Idade -->
+            <div class="flex justify-between text-zinc-800 border-b-gray-950 border-b-2 pb-2">
+              <p>Idade</p>
+              <p class="font-bold">{{ usuario.idade }} anos</p>
+            </div>
+          
+            <!-- Renda Mensal -->
+            <div class="flex justify-between text-zinc-800 border-b-gray-950 border-b-2 pb-2">
+              <p>Renda Mensal</p>
+              <p class="font-bold" [ngClass]="{'text-green-400-500': usuario.rendaMensal > 0}">
+                R$ {{ usuario.rendaMensal.toFixed(2) }}
+              </p>
+            </div>
+   
+          </div>
+         
+    </div>
+  </div>
+  
